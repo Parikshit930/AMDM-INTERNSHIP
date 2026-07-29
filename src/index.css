@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --c-ink: #0A0A09;
+  --c-charcoal: #16140F;
+  --c-charcoal2: #1D1A14;
+  --c-ivory: #F3F0E6;
+  --c-smoke: #9A9588;
+}
+
+html.light {
+  --c-ink: #F6F3EA;
+  --c-charcoal: #ECE6D6;
+  --c-charcoal2: #E3DCC8;
+  --c-ivory: #1A1710;
+  --c-smoke: #5C5648;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--c-ink);
+  color: var(--c-ivory);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+::selection {
+  background: #C9A227;
+  color: #0A0A09;
+}
+
+/* thin gold scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0A0A09; }
+::-webkit-scrollbar-thumb { background: linear-gradient(#E9CD7A, #8A6A14); border-radius: 4px; }
+
+.grain-bg {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+.text-gradient-gold {
+  background-image: linear-gradient(135deg, #E9CD7A 0%, #C9A227 45%, #8A6A14 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.blueprint-line {
+  stroke: #C9A227;
+  stroke-width: 1;
+  fill: none;
+  opacity: 0.5;
+}
+
+.glass {
+  background: rgba(22, 20, 15, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(201,162,39,0.18);
+}
+
+.eyebrow {
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: #C9A227;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* focus visibility */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid #C9A227;
+  outline-offset: 3px;
+}
