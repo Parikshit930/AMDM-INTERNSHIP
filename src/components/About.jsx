@@ -24,7 +24,12 @@ export default function About() {
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
           <Reveal>
-            <ImagePlaceholder label="Factory Floor Photograph" ratio="aspect-[5/4]" className="rounded-sm" />
+            <ImagePlaceholder
+              src="/images/about/factory-floor.jpg"
+              label="Factory Floor Photograph"
+              ratio="aspect-[5/4]"
+              className="rounded-sm"
+            />
           </Reveal>
           <Reveal delay={0.15} className="flex flex-col gap-6">
             <h3 className="font-display text-2xl text-ivory">Our Story</h3>

@@ -7,12 +7,42 @@ import ImagePlaceholder from './ImagePlaceholder'
 const CATS = ['All', 'Gym Shakers', 'Lunch Box Dies', 'Injection Moulds', 'Custom Manufacturing']
 
 const PROJECTS = [
-  { cat: 'Gym Shakers', title: 'Premium Gym Shaker Tooling', text: 'Multi-cavity mould developed for a leak-proof gym shaker line.' },
-  { cat: 'Lunch Box Dies', title: 'Electric Lunch Box Die Set', text: 'Precision die set for an insulated, self-heating lunch box housing.' },
-  { cat: 'Injection Moulds', title: 'High-Volume Injection Mould', text: 'Production mould built for consistent, high-volume component output.' },
-  { cat: 'Custom Manufacturing', title: 'Client-Specified Component Run', text: 'Custom plastic component manufactured to client engineering drawings.' },
-  { cat: 'Lunch Box Dies', title: 'Non-Electric Lunch Box Mould', text: 'Multi-compartment mould tooling for daily-use lunch boxes.' },
-  { cat: 'Injection Moulds', title: 'Industrial Die Development', text: 'Custom industrial die engineered for repeatable durability.' },
+  {
+    cat: 'Gym Shakers',
+    title: 'Premium Gym Shaker Tooling',
+    text: 'Multi-cavity mould developed for a leak-proof gym shaker line.',
+    image: '/images/projects/gym-shaker-mould.jpg',
+  },
+  {
+    cat: 'Lunch Box Dies',
+    title: 'Electric Lunch Box Die Set',
+    text: 'Precision die set for an insulated, self-heating lunch box housing.',
+    image: '/images/projects/electric-lunch-box-die.jpg',
+  },
+  {
+    cat: 'Injection Moulds',
+    title: 'High-Volume Injection Mould',
+    text: 'Production mould built for consistent, high-volume component output.',
+    image: '/images/projects/injection-mould-high-volume.jpg',
+  },
+  {
+    cat: 'Custom Manufacturing',
+    title: 'Client-Specified Component Run',
+    text: 'Custom plastic component manufactured to client engineering drawings.',
+    image: '/images/projects/custom-manufacturing-run.jpg',
+  },
+  {
+    cat: 'Lunch Box Dies',
+    title: 'Non-Electric Lunch Box Mould',
+    text: 'Multi-compartment mould tooling for daily-use lunch boxes.',
+    image: '/images/projects/lunch-box-mould.jpg',
+  },
+  {
+    cat: 'Injection Moulds',
+    title: 'Industrial Die Development',
+    text: 'Custom industrial die engineered for repeatable durability.',
+    image: '/images/projects/industrial-die-development.jpg',
+  },
 ]
 
 export default function Projects() {
@@ -58,7 +88,7 @@ export default function Projects() {
                 className="glass rounded-sm overflow-hidden group"
               >
                 <div className="relative overflow-hidden">
-                  <ImagePlaceholder label={`${p.title} Photo`} ratio="aspect-[4/3]" />
+                  <ImagePlaceholder src={p.image} label={`${p.title} Photo`} ratio="aspect-[4/3]" />
                   <div className="absolute inset-0 bg-ink/0 group-hover:bg-ink/20 transition-colors" />
                 </div>
                 <div className="p-6">

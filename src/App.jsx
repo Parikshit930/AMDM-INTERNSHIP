@@ -19,12 +19,21 @@ import BackToTop from './components/BackToTop'
 
 export default function App() {
   const [theme, setTheme] = useState('dark')
+  const [selectedProduct, setSelectedProduct] = useState('')
 
   useEffect(() => {
     document.documentElement.classList.toggle('light', theme === 'light')
   }, [theme])
 
   const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
+
+  const handleInquireProduct = (productName) => {
+    setSelectedProduct(productName)
+    const contactElement = document.getElementById('contact')
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   return (
     <>
@@ -36,13 +45,13 @@ export default function App() {
         <Hero />
         <About />
         <Services />
-        <Products />
+        <Products onInquireProduct={handleInquireProduct} />
         <Machinery />
         <WhyChooseUs />
         <Projects />
         <Gallery />
         <Testimonials />
-        <Contact />
+        <Contact selectedProduct={selectedProduct} onClearProduct={() => setSelectedProduct('')} />
       </main>
       <Footer />
       <WhatsAppButton />

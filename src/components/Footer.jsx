@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import { FaWhatsapp } from 'react-icons/fa'
 import { FiDownload } from 'react-icons/fi'
 
 const LINKS = [
@@ -55,16 +55,14 @@ export default function Footer() {
             </ul>
             <div className="flex gap-3 mt-5">
               {[
-                { icon: <FaWhatsapp />, href: 'https://wa.me/919873962526' },
-                { icon: <FaFacebookF />, href: '#' },
-                { icon: <FaInstagram />, href: '#' },
-                { icon: <FaLinkedinIn />, href: '#' },
+                { icon: <FaWhatsapp />, href: 'https://wa.me/919873962526', label: 'WhatsApp' },
               ].map((s, i) => (
                 <a
                   key={i}
                   href={s.href}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
                   data-cursor
                   className="w-9 h-9 rounded-full border border-gold-line flex items-center justify-center text-gold hover:bg-gold hover:text-ink transition-colors"
                 >

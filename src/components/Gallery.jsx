@@ -6,10 +6,18 @@ import ImagePlaceholder from './ImagePlaceholder'
 
 const CATEGORIES = ['Factory', 'Machines', 'Products', 'Moulds', 'Manufacturing Process']
 
-const ITEMS = Array.from({ length: 10 }, (_, i) => ({
-  id: i,
-  cat: CATEGORIES[i % CATEGORIES.length],
-}))
+const ITEMS = [
+  { id: 0, cat: 'Factory', title: 'Factory Floor Setup', image: '/images/gallery/factory-1.jpg' },
+  { id: 1, cat: 'Machines', title: 'VMC Machining Center', image: '/images/gallery/machines-1.jpg' },
+  { id: 2, cat: 'Products', title: 'Gym Shaker Production', image: '/images/gallery/products-1.jpg' },
+  { id: 3, cat: 'Moulds', title: 'Precision Injection Mould', image: '/images/gallery/moulds-1.jpg' },
+  { id: 4, cat: 'Manufacturing Process', title: 'CNC Milling in Progress', image: '/images/gallery/process-1.jpg' },
+  { id: 5, cat: 'Factory', title: 'Assembly & Inspection Area', image: '/images/gallery/factory-2.jpg' },
+  { id: 6, cat: 'Machines', title: 'Injection Moulding Machine', image: '/images/gallery/machines-2.jpg' },
+  { id: 7, cat: 'Products', title: 'Lunch Box Component Fit', image: '/images/gallery/products-2.jpg' },
+  { id: 8, cat: 'Moulds', title: 'Multi-Cavity Tooling Set', image: '/images/gallery/moulds-2.jpg' },
+  { id: 9, cat: 'Manufacturing Process', title: 'Die Fitting & Polish', image: '/images/gallery/process-2.jpg' },
+]
 
 export default function Gallery() {
   const [active, setActive] = useState('Factory')
@@ -53,7 +61,11 @@ export default function Gallery() {
                 whileHover={{ scale: 1.03 }}
                 className="rounded-sm overflow-hidden"
               >
-                <ImagePlaceholder label={`${item.cat} #${item.id + 1}`} ratio="aspect-square" />
+                <ImagePlaceholder
+                  src={item.image}
+                  label={`${item.cat} — ${item.title}`}
+                  ratio="aspect-square"
+                />
               </motion.div>
             ))}
           </AnimatePresence>
