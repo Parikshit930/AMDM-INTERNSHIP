@@ -106,7 +106,7 @@ export default function Contact({ selectedProduct, onClearProduct }) {
             <div className="glass rounded-sm overflow-hidden aspect-[4/3] min-h-[260px] relative border border-gold-line/30">
               <iframe
                 title="A.M Die Mould Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d621.2401032501673!2d77.15197006906709!3d28.680496155760796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d024ca577fbf5%3A0x5122bf0f5c841f94!2s47%2C%20Lawrence%20Rd%2C%20Block%20C6%2C%20Keshav%20Puram%2C%20Tri%20Nagar%2C%20Delhi%2C%20110035!5e1!3m2!1sen!2sin!4v1787716759513!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470.58069996704!2d77.15246690071211!3d28.68067047896169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03929ca181ff%3A0x9cbe6ab76df2c70c!2sABREHBAR%20INTERNATIONAL%20PVT%20LTD%23%20Hing%20Importer%23%20Hing%20wholesaler%20%23Hing%20Supplier%20in%20Delhi%23%20Hing%20Wholesaler%20in%20Lawrence%20Road!5e1!3m2!1sen!2sin!4v1787818696199!5m2!1sen!2sin"
                 className="w-full h-full border-0"
                 allowFullScreen
                 loading="lazy"
@@ -151,13 +151,12 @@ export default function Contact({ selectedProduct, onClearProduct }) {
                 </div>
               </motion.div>
             ) : (
-              <form onSubmit={onSubmit} className="grid sm:grid-cols-2 gap-5">
+              <form onSubmit={onSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {form.product && (
-                  <div className="sm:col-span-2 bg-gold/15 border border-gold/40 rounded-sm px-4 py-2.5 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="text-gold text-xs font-semibold uppercase tracking-widest2">Catalogue Item:</span>
-                      <span className="text-ivory font-medium text-sm">{form.product}</span>
-                    </div>
+                  <div className="sm:col-span-2 flex items-center justify-between gap-4 p-4 bg-white/5 border border-gold-line rounded-sm">
+                    <p className="text-sm text-ivory">
+                      <span className="text-gold font-bold">Selected:</span> {form.product}
+                    </p>
                     <button
                       type="button"
                       onClick={() => {
