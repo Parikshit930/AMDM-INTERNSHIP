@@ -9,7 +9,6 @@ import Services from './components/Services'
 import Products from './components/Products'
 import Machinery from './components/Machinery'
 import WhyChooseUs from './components/WhyChooseUs'
-import Projects from './components/Projects'
 import Gallery from './components/Gallery'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
@@ -48,7 +47,6 @@ export default function App() {
         <Products onInquireProduct={handleInquireProduct} />
         <Machinery />
         <WhyChooseUs />
-        <Projects />
         <Gallery />
         <Testimonials />
         <Contact selectedProduct={selectedProduct} onClearProduct={() => setSelectedProduct('')} />

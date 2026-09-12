@@ -4,19 +4,15 @@ import SectionHeading from './SectionHeading'
 import Reveal from './Reveal'
 import ImagePlaceholder from './ImagePlaceholder'
 
-const CATEGORIES = ['Factory', 'Machines', 'Products', 'Moulds', 'Manufacturing Process']
+const CATEGORIES = ['Factory', 'Machines', 'Products']
 
 const ITEMS = [
   { id: 0, cat: 'Factory', title: 'Factory Floor Setup', image: '/images/gallery/factory-1.jpg' },
   { id: 1, cat: 'Machines', title: 'VMC Machining Center', image: '/images/gallery/machines-1.jpg' },
   { id: 2, cat: 'Products', title: 'Gym Shaker Production', image: '/images/gallery/products-1.jpg' },
-  { id: 3, cat: 'Moulds', title: 'Precision Injection Mould', image: '/images/gallery/moulds-1.jpg' },
-  { id: 4, cat: 'Manufacturing Process', title: 'CNC Milling in Progress', image: '/images/gallery/process-1.jpg' },
-  { id: 5, cat: 'Factory', title: 'Assembly & Inspection Area', image: '/images/gallery/factory-2.jpg' },
-  { id: 6, cat: 'Machines', title: 'Injection Moulding Machine', image: '/images/gallery/machines-2.jpg' },
-  { id: 7, cat: 'Products', title: 'Lunch Box Component Fit', image: '/images/gallery/products-2.jpg' },
-  { id: 8, cat: 'Moulds', title: 'Multi-Cavity Tooling Set', image: '/images/gallery/moulds-2.jpg' },
-  { id: 9, cat: 'Manufacturing Process', title: 'Die Fitting & Polish', image: '/images/gallery/process-2.jpg' },
+  { id: 3, cat: 'Factory', title: 'Assembly & Inspection Area', image: '/images/gallery/factory-2.jpg' },
+  { id: 4, cat: 'Machines', title: 'Injection Moulding Machine', image: '/images/gallery/machines-2.jpg' },
+  { id: 5, cat: 'Products', title: 'Lunch Box Component Fit', image: '/images/gallery/products-2.jpg' },
 ]
 
 export default function Gallery() {
